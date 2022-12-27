@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BEngine/Application.h"
+#include "BEngine/Log.h"
 
 /////////////////////////Entry Point///////////////////////////////
 #include "BEngine/EntryPoint.h"

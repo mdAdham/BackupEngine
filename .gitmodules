@@ -1,0 +1,3 @@
+[submodule "BackupEngine/vendor/spdlog"]
+	path = BackupEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
