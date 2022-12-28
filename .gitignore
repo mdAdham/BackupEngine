@@ -3,5 +3,7 @@
 bin/
 bin-int/
 
-# Files
 *.user
+BackupEngine.sln
+*.filters
+*.vcxproj

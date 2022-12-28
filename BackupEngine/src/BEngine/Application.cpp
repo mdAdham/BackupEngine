@@ -1,4 +1,5 @@
 #include "Application.h"
+#include<iostream>
 
 namespace BEngine
 {
@@ -12,6 +13,10 @@ namespace BEngine
 
 	void Application::Run()
 	{
-		while (true);
+		while (true)
+		{
+			if (std::cin.get())
+				break;
+		}
 	}
 }
