@@ -5,5 +5,5 @@ bin-int/
 
 *.user
 BackupEngine.sln
-*.filters
-*.vcxproj
+**.filters
+**.vcxproj

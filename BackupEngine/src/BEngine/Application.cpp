@@ -1,6 +1,6 @@
+#include "enpch.h"
 #include "Application.h"
-#include<iostream>
-
+#include "Log.h"
 namespace BEngine
 {
 	Application::Application()
@@ -13,10 +13,16 @@ namespace BEngine
 
 	void Application::Run()
 	{
-		while (true)
+		WindowResizeEvent e(1200, 720);
+		if (e.IsInCategory(EventCategoryApplication))
 		{
-			if (std::cin.get())
-				break;
+			EN_TRACE(e);
 		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			EN_TRACE(e);
+		}
+
+		while (true);
 	}
 }

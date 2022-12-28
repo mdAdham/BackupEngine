@@ -9,3 +9,5 @@
 #else
 	#error BEngine only supports window!
 #endif // EN_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
