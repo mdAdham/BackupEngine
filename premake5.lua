@@ -10,6 +10,13 @@ workspace "BackupEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include Directories
+IncludeDir = {}
+IncludeDir["GLFW"] = "BackupEngine/vendor/GLFW/include"
+
+include "BackupEngine/vendor/GLFW"
+
+
 project "BackupEngine"
 	location "BackupEngine"
 	kind "SharedLib"
@@ -19,7 +26,7 @@ project "BackupEngine"
 	objdir ("bin-int/"..outputdir.."/%{prj.name}")
 
 	pchheader "enpch.h"
-	pchsource "BEngine/src/enpch.cpp"
+	pchsource "BackupEngine/src/enpch.cpp"
 
 	files
 	{
@@ -29,8 +36,19 @@ project "BackupEngine"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"user32",
+		"gdi32",
+		"shell32",
+		"kernel32"
 	}
 
 	defines

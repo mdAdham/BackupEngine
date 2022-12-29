@@ -4,6 +4,15 @@
     <Filter Include="BEngine">
       <UniqueIdentifier>{3D0A3885-A9E9-B620-B201-42F71E601D82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BEngine\Events">
+      <UniqueIdentifier>{812FAE1F-6DFD-A125-5691-124C42FE7D8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BEngine\Application.h">
@@ -15,10 +24,29 @@
     <ClInclude Include="src\BEngine\EntryPoint.h">
       <Filter>BEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\BEngine\Events\ApplicationEvent.h">
+      <Filter>BEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BEngine\Events\Event.h">
+      <Filter>BEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BEngine\Events\KeyEvent.h">
+      <Filter>BEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BEngine\Events\MouseEvent.h">
+      <Filter>BEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\BEngine\Log.h">
       <Filter>BEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\BEngine\Window.h">
+      <Filter>BEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\BackupEngine.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BEngine\Application.cpp">
@@ -27,5 +55,9 @@
     <ClCompile Include="src\BEngine\Log.cpp">
       <Filter>BEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enpch.cpp" />
   </ItemGroup>
 </Project>

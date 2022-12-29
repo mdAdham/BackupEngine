@@ -1,3 +1,6 @@
 [submodule "BackupEngine/vendor/spdlog"]
 	path = BackupEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "BackupEngine/vendor/GLFW"]
+	path = BackupEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
