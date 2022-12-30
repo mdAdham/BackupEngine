@@ -36,6 +36,8 @@ namespace BEngine {
 	public:
 		virtual ~Event() = default;
 
+		bool Handled = false;
+
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -45,8 +47,7 @@ namespace BEngine {
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
+	
 	};
 
 	class EventDispatcher

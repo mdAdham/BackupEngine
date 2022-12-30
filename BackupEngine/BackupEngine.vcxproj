@@ -78,12 +78,13 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>enpch.h</PrecompiledHeaderFile>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>EN_PLATFORM_WINDOWS;EN_BUILD_DLL;EN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -101,7 +102,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>enpch.h</PrecompiledHeaderFile>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>EN_PLATFORM_WINDOWS;EN_BUILD_DLL;EN_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
@@ -110,6 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -128,7 +130,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>enpch.h</PrecompiledHeaderFile>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>EN_PLATFORM_WINDOWS;EN_BUILD_DLL;EN_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
@@ -137,6 +139,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -159,6 +162,8 @@
     <ClInclude Include="src\BEngine\Events\Event.h" />
     <ClInclude Include="src\BEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\BEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\BEngine\Layer.h" />
+    <ClInclude Include="src\BEngine\LayerStack.h" />
     <ClInclude Include="src\BEngine\Log.h" />
     <ClInclude Include="src\BEngine\Window.h" />
     <ClInclude Include="src\BackupEngine.h" />
@@ -167,6 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BEngine\Application.cpp" />
+    <ClCompile Include="src\BEngine\Layer.cpp" />
+    <ClCompile Include="src\BEngine\LayerStack.cpp" />
     <ClCompile Include="src\BEngine\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\enpch.cpp">

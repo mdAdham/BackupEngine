@@ -74,20 +74,24 @@ project "BackupEngine"
 
 	filter "configurations:Debug"
 		defines "EN_DEBUG"
+		buildoptions "/MDd"
 		symbols "on"
 
 	filter "configurations:Release"
 		defines "EN_RELEASE"
+		buildoptions "/MD"
 		optimize "on"
 
 	filter "configurations:Dist"
 		defines "EN_DIST"
+		buildoptions "/MD"
 		optimize "on"
 
 project "SandBox"
 	location "SandBox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -126,12 +130,15 @@ project "SandBox"
 
 	filter "configurations:Debug"
 		defines "EN_DEBUG"
+		buildoptions "/MDd"
 		symbols "on"
 
 	filter "configurations:Release"
 		defines "EN_RELEASE"
+		buildoptions "/MD"
 		optimize "on"
 
 	filter "configurations:Dist"
 		defines "EN_DIST"
+		buildoptions "/MD"
 		optimize "on"
